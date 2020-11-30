@@ -7,10 +7,42 @@ uuid: 394af977-8e77-45ef-b726-687fd80ab827
 type: HTTP
 context: /hello/1.0.0
 contextTemplate: /hello/{version}
-tags: []
+tags:
+ - Basic
+ - Hello
 documents: []
-lastUpdated: Dec 1, 2020 11:09:25 AM
+lastUpdated: Dec 1, 2020 11:35:01 AM
 availableTiers:
+ -
+  name: Bronze
+  displayName: Bronze
+  description: Allows 1000 requests per minute
+  requestsPerMin: 1000
+  requestCount: 1000
+  unitTime: 1
+  timeUnit: min
+  tierPlan: FREE
+  stopOnQuotaReached: true
+ -
+  name: Gold
+  displayName: Gold
+  description: Allows 5000 requests per minute
+  requestsPerMin: 5000
+  requestCount: 5000
+  unitTime: 1
+  timeUnit: min
+  tierPlan: FREE
+  stopOnQuotaReached: true
+ -
+  name: Silver
+  displayName: Silver
+  description: Allows 2000 requests per minute
+  requestsPerMin: 2000
+  requestCount: 2000
+  unitTime: 1
+  timeUnit: min
+  tierPlan: FREE
+  stopOnQuotaReached: true
  -
   name: Unlimited
   displayName: Unlimited
@@ -32,7 +64,6 @@ endpointSecured: false
 endpointAuthDigest: false
 transports: http,https
 advertiseOnly: false
-apiOwner: admin
 subscriptionAvailability: current_tenant
 corsConfiguration:
   corsConfigurationEnabled: false
@@ -53,13 +84,13 @@ corsConfiguration:
    - DELETE
    - PATCH
    - OPTIONS
-endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http://www.mocky.io/v2/5e850ff0300000c70297ade9"},"production_endpoints":{"url":"http://www.mocky.io/v2/5e850ff0300000c70297ade9"}}'
+endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http:\/\/www.mocky.io\/v2\/5e850ff0300000c70297ade9"},"production_endpoints":{"url":"http:\/\/www.mocky.io\/v2\/5e850ff0300000c70297ade9"}}'
 responseCache: Disabled
 cacheTimeout: 300
 implementation: ENDPOINT
 authorizationHeader: Authorization
 scopes: []
-isDefaultVersion: false
+isDefaultVersion: true
 isPublishedDefaultVersion: false
 keyManagers:
  - all
